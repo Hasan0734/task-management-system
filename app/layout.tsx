@@ -5,7 +5,9 @@ export const metadata = {
 
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar/Sidebar";
+
+import React from 'react';
+import Sidebar from "./dashboard/Sidebar";
 
 // If loading a variable font, you don't need to specify the font weight
 const openSans = Open_Sans({
@@ -22,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={openSans.className}>
       <body>
-        <div className="flex h-screen">
+        <div className="flex h-screen w-screen overflow-hidden">
           <Sidebar />
           {children}
+         
         </div>
       </body>
     </html>
