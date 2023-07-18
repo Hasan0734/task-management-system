@@ -10,7 +10,7 @@ function Sidebar() {
       <div className="flex flex-col w-full bg-primary h-full overflow-hidden md:rounded-3xl p-5 ">
         <div className="flex items-center gap-3 justify-center mt-10 flex-shrink-0">
           <div className="p-3 md:p-4 rounded-full bg-white flex items-center justify-center">
-            <Icon icon="solar:clipboard-check-linear"  width={40} />
+            <Icon icon="solar:clipboard-check-linear" width={40} />
           </div>
           <h3 className="text-xl md:text-3xl text-white font-bold">My-Task</h3>
         </div>
