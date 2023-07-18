@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Leaders = ()=> {
+const page = ()=> {
   return (
     <div>Leader</div>
   )
 }
 
-export default Leaders
+export default page

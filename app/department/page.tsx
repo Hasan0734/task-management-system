@@ -1,7 +1,8 @@
+'use client'
 import React from 'react';
 
-const Department = () => {
+const page = () => {
   return <div> Department</div>;
 };
 
-export default Department;
+export default page;

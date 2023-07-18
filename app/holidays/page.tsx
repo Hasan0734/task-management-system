@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Holidays = () => {
+const page = () => {
   return <div>Holidays</div>;
 };
 
-export default Holidays;
+export default page;

@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 
-const Attendance = () => {
+const page = () => {
   return <div>Attendance</div>;
 };
 
-export default Attendance;
+export default page;

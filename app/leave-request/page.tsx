@@ -1,7 +1,7 @@
 import React from 'react';
 
-const LeaveRequest = () => {
+const page = () => {
   return <div> LeaveRequest</div>;
 };
 
-export default LeaveRequest;
+export default page;

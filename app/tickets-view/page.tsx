@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TicketsView = ()=> {
+const page = ()=> {
   return (
     <div>TicketsView</div>
   )
 }
 
-export default TicketsView
+export default page

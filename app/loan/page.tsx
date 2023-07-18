@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Loan = () => {
+const page = () => {
   return <div> Loan</div>;
 };
 
-export default Loan;
+export default page;

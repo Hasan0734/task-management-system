@@ -1,7 +1,8 @@
+'use client'
 import React from 'react';
 
-const AttendanceEmployees = () => {
+const page = () => {
   return <div>Attendance Employees</div>;
 };
 
-export default AttendanceEmployees;
+export default page;

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Timesheet = ()=> {
+const page = ()=> {
   return (
     <div>Timesheet</div>
   )
 }
 
-export default Timesheet
+export default page
