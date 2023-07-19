@@ -7,7 +7,7 @@ export const sidebar = [
       {
         id: 1,
         name: 'Hr Dashboard',
-        link: '/',
+        link: '/hr-dashboard',
       },
       {
         id: 2,

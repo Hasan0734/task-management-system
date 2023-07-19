@@ -4,10 +4,10 @@ export const metadata = {
 };
 
 import { Open_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 import React from 'react';
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 // If loading a variable font, you don't need to specify the font weight
 const openSans = Open_Sans({
