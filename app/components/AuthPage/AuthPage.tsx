@@ -28,7 +28,7 @@ export default function AuthPage({ children }: Props) {
                 </div>
               </div>
             </div>
-            <div className="bg-primary rounded-md p-12 max-w-xl justify-self-center w-full lg:justify-self-start">
+            <div className="bg-primary rounded-md p-20 max-w-xl justify-self-center w-full lg:justify-self-start">
               {children}
             </div>
           </div>

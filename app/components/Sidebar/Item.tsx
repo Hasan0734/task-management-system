@@ -1,47 +1,64 @@
-'use client'
+'use client';
 
-import { Icon } from '@iconify/react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React, { useRef, useState } from 'react'
+import { Icon } from '@iconify/react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useRef, useState } from 'react';
 
 interface propsType {
+  collapse: boolean;
   item: {
-    id: number
-    title: string
-    icon: string
+    id: number;
+    title: string;
+    icon: string;
     children: {
-      id: number
-      name: string
-      link: string
-    }[]
-  }
+      id: number;
+      name: string;
+      link: string;
+    }[];
+  };
 }
 
-const Item = ({ item }: propsType) => {
-  const childRef = useRef<HTMLUListElement>(null)
-  const [isOpen, setIsOpen] = useState(false)
+const Item = ({ item, collapse }: propsType) => {
+  const childRef = useRef<HTMLUListElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const checkCurrent = (data: any[]) => {
-    const filter = data.filter((dt) => dt.link === pathname)
-    return filter.length ? true : false
-  }
+    const filter = data.filter((dt) => dt.link === pathname);
+    if (isOpen) {
+      return false;
+    }
+    return filter.length ? true : false;
+  };
 
   const activeRoute = (child: any) => {
-    const exist = child.link === pathname
-    return exist
-  }
+    const exist = child.link === pathname;
+    return exist;
+  };
+  const childOpen = (children: any[]) => {
+    if (children?.length > 0) {
+      if (isOpen) {
+        return `${childRef.current?.scrollHeight}px`;
+      }
+      // if (checkCurrent(children) && active) {
+      //   return `${childRef.current?.scrollHeight}px`;
+      // }
+    }
+    return '0px';
+  };
 
   return (
     <>
       <li className=" text-base font-normal " key={item.id}>
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
           className={`${
             checkCurrent(item.children) ? 'text-orange-500' : ' text-white  '
-          } py-2 px-2 flex items-center justify-between w-full hover:text-orange-500`}
+          } py-2 px-2 transition-all  duration-300 flex items-center ${collapse ? 'justify-center' : 'justify-between'} w-full hover:text-orange-500`}
         >
           <div className="flex items-center space-x-2">
             <Icon
@@ -49,9 +66,9 @@ const Item = ({ item }: propsType) => {
               width={20}
               icon={item?.icon}
             />
-            <span>{item.title}</span>
+            <span className={`transition-all duration-300 ${!collapse ? 'block' : 'hidden'}`}>{item.title}</span>
           </div>
-          {item.children?.length > 0 && (
+          {item.children?.length > 0 && !collapse &&(
             <Icon
               className="opacity-50"
               width={20}
@@ -60,13 +77,10 @@ const Item = ({ item }: propsType) => {
           )}
         </button>
 
-        {
+        {!collapse &&
           <ul
             style={{
-              height:
-                item.children?.length  > 0 && isOpen || checkCurrent(item.children)
-                  ? `${childRef.current?.scrollHeight}px`
-                  : '0px',
+              height: childOpen(item.children),
             }}
             ref={childRef}
             className={`space-y-1 transition-all duration-300 overflow-hidden`}
@@ -92,7 +106,7 @@ const Item = ({ item }: propsType) => {
         }
       </li>
     </>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
