@@ -1,21 +1,28 @@
 'use client';
 import { sidebar } from '@/utils/data';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import Item from './Item';
 
-function Sidebar() {
+interface propsType {
+  setToggle: (arg: boolean) => void;
+  toggle: boolean;
+}
+
+function Sidebar({ toggle, setToggle }: propsType) {
   const [collapse, setCollapse] = useState(false);
 
   return (
     <div
-      className={`absolute md:relative ${
+      className={`absolute xl:relative ${
+        toggle ? 'left-0' : '-left-[500px]'
+      } xl:-left-0 z-10 ${
         collapse ? 'w-[130px]' : 'w-[250px] md:w-[315px]'
-      } md:pl-6 md:py-6 h-full transition-all duration-300`}
+      } xl:pl-6 xl:py-6 h-full transition-all duration-300`}
     >
       <div
         className={`flex flex-col w-full bg-primary h-full overflow-hidden transition-all duration-300 ${
-          collapse ? 'md:rounded-2xl p-3' : 'md:rounded-3xl p-5'
+          collapse ? 'xl:rounded-2xl p-3' : 'xl:rounded-3xl p-5'
         } `}
       >
         <div
@@ -24,7 +31,7 @@ function Sidebar() {
           } transition-all duration-300 `}
         >
           <div
-            className={`p-3 md:p-4 rounded-full bg-white flex items-center justify-center`}
+            className={`p-3 xl:p-4 rounded-full bg-white flex items-center justify-center`}
           >
             <Icon
               icon="solar:clipboard-check-linear"
@@ -40,7 +47,9 @@ function Sidebar() {
           </h3>
         </div>
         <ul
-          className={`flex-grow flex-shrink mt-10 space-y-3 overflow-x-hidden transition-all duration-300 ${collapse ? 'overflow-y-auto' : 'overflow-y-scroll scrollbar'}  
+          className={`flex-grow flex-shrink mt-10 space-y-3 overflow-x-hidden transition-all duration-300 ${
+            collapse ? 'overflow-y-auto' : 'overflow-y-scroll scrollbar'
+          }  
           scrollbar-thumb-orange-500 scrollbar-track-transparent scrollbar-thumb-rounded-md scrollbar-w-1.5`}
         >
           {sidebar.map((item, i) => (
@@ -49,7 +58,12 @@ function Sidebar() {
         </ul>
         <div className="flex-shrink-0 flex justify-center pt-8 pb-6">
           <button
-            onClick={() => setCollapse(!collapse)}
+            onClick={() => {
+              setCollapse(!collapse);
+              if (!collapse) {
+                setToggle(false);
+              }
+            }}
             className="flex items-center justify-center text-center p-2
              relative before:absolute before:w-full before:h-[3px]
               before:rounded-full before:bg-white before:-bottom-0"

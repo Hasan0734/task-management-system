@@ -16,6 +16,9 @@ module.exports = {
         primary: '#484c7f',
         ofLight: '#f9fbfd',
         secondary: '#F19828'
+      },
+      screens: {
+        xs: '490px'
       }
     },
   },

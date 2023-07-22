@@ -1,19 +1,19 @@
 export const metadata = {
-  title: "Task Management System",
-  description: "Manage your project task with employee",
+  title: 'Task Management System',
+  description: 'Manage your project task with employee',
 };
 
-import { Open_Sans } from "next/font/google";
-import "../globals.css";
+import { Open_Sans } from 'next/font/google';
+import '../globals.css';
 
 import React from 'react';
-import Sidebar from "../components/Sidebar/Sidebar";
+import Layout from '../components/Layout/Layout';
 
 // If loading a variable font, you don't need to specify the font weight
 const openSans = Open_Sans({
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  subsets: ["cyrillic"],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['cyrillic'],
 });
 
 export default function RootLayout({
@@ -21,14 +21,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en" className={openSans.className}>
       <body>
-        <div className="flex h-screen w-screen overflow-hidden">
-          <Sidebar />
-          {children}
-         
-        </div>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
