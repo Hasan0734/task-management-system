@@ -1,7 +1,9 @@
-import React from 'react';
-import TextField from '../ui/inputs/TextField';
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
+import React from "react";
+import TextField from "../ui/inputs/TextField";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import MyPopover from "../ui/MyPopover/MyPopover";
+import NotificationPopover from "../NotificationPopover/NotificationPopover";
 
 interface propsType {
   setToggle: (arg: boolean) => void;
@@ -9,10 +11,10 @@ interface propsType {
 }
 
 const employees = [
-  { id: 1, avatar: '/assets/avatars/avatar3.jpg' },
-  { id: 2, avatar: '/assets/avatars/avatar4.jpg' },
-  { id: 3, avatar: '/assets/avatars/avatar7.jpg' },
-  { id: 4, avatar: '/assets/avatars/avatar8.jpg' },
+  { id: 1, avatar: "/assets/avatars/avatar3.jpg" },
+  { id: 2, avatar: "/assets/avatars/avatar4.jpg" },
+  { id: 3, avatar: "/assets/avatars/avatar7.jpg" },
+  { id: 4, avatar: "/assets/avatars/avatar8.jpg" },
 ];
 
 export default function Navbar({ setToggle, toggle }: propsType) {
@@ -32,12 +34,12 @@ export default function Navbar({ setToggle, toggle }: propsType) {
         />
       </form>
       <div className="flex items-center justify-between gap-5">
-        <div className='flex items-center gap-5'>
+        <div className="flex items-center gap-5">
           <div className="flex items-center gap-6">
-            <Link href={'/'}>
+            <Link href={"/"}>
               <Icon
                 className="text-primary"
-                icon={'bxs:info-square'}
+                icon={"bxs:info-square"}
                 width={20}
               />
             </Link>
@@ -55,21 +57,14 @@ export default function Navbar({ setToggle, toggle }: propsType) {
                   <Icon
                     width={28}
                     className="text-secondary stroke-[4px]"
-                    icon={'ic:baseline-plus'}
+                    icon={"ic:baseline-plus"}
                   />
                 </button>
               </li>
             </ul>
           </div>
-          <div className="relative flex">
-            <span
-              className="animate-ping duration-500 delay-300 z-0 
-          absolute inline-flex h-full w-full rounded-full bg-gray-300"
-            ></span>
-            <button className="z-10">
-              <Icon className="text-primary" icon="mdi:bell" width={25} />
-            </button>
-          </div>
+          
+          <NotificationPopover />
           <div className="flex items-center gap-3">
             <div className="space-y-0">
               <h3 className="text-base font-bold text-gray-600">Jhon Week</h3>
@@ -88,7 +83,7 @@ export default function Navbar({ setToggle, toggle }: propsType) {
         </div>
         <div className="block xl:hidden">
           <button onClick={() => setToggle(!toggle)}>
-            <Icon width={25} icon={'fa-solid:bars'} />
+            <Icon width={25} icon={"fa-solid:bars"} />
           </button>
         </div>
       </div>
