@@ -14,7 +14,7 @@ export default function NotificationPopover() {
       <MyPopover
         bodyClass="max-h-[450px] overflow-hidden"
         buttonClass=""
-        panelClass=""
+        panelClass="left-0 lg:left-auto md:right-0 mt-5"
         button={<Icon className="text-primary" icon="mdi:bell" width={25} />}
       >
         <div className="flex flex-col">

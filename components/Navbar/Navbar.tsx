@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import MyPopover from "../ui/MyPopover/MyPopover";
 import NotificationPopover from "../NotificationPopover/NotificationPopover";
+import AccountPopover from "../AccountPopover/AccountPopover";
 
 interface propsType {
   setToggle: (arg: boolean) => void;
@@ -63,22 +64,16 @@ export default function Navbar({ setToggle, toggle }: propsType) {
               </li>
             </ul>
           </div>
-          
+
           <NotificationPopover />
+
           <div className="flex items-center gap-3">
             <div className="space-y-0">
               <h3 className="text-base font-bold text-gray-600">Jhon Week</h3>
               <span className="text-sm text-gray-600 block">Admin Profile</span>
             </div>
-            <div>
-              <button>
-                <img
-                  className="w-14 h-14 bg-white rounded-full border border-gray-400 p-1"
-                  src="/assets/avatars/profile_av.png"
-                  alt=""
-                />
-              </button>
-            </div>
+
+            <AccountPopover />
           </div>
         </div>
         <div className="block xl:hidden">

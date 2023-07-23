@@ -19,7 +19,7 @@ export default function MyPopover({
   panelClass,
 }: propsType) {
   const allStyle = twMerge(
-    "bg-white w-[250px] sm:w-[400px]  max-h-[80vh] overflow-auto ring-1 ring-gray-200 rounded shadow-md",
+    "bg-white w-[250px] sm:w-[400px] max-h-[80vh] overflow-auto ring-1 ring-gray-200 rounded shadow-md",
     bodyClass
   );
   return (
@@ -27,7 +27,7 @@ export default function MyPopover({
       {({ open }) => (
         <>
           <Popover.Button
-            className={` outline-none
+            className={`outline-none
                 ${open ? "" : "text-opacity-90"}
                 ${twMerge(
                   "z-10",
