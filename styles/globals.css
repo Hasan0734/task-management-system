@@ -6,7 +6,7 @@
 
 @layer base {
     body{
-        @apply bg-ofLight
+        @apply bg-ofLight text-gray-600
     }
 }
 

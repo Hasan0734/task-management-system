@@ -1,8 +1,7 @@
-
-import React from 'react';
-import TextField from '../ui/inputs/TextField';
-import Link from 'next/link';
-import CheckBox from '../ui/inputs/CheckBox';
+import React from "react";
+import TextField from "../ui/inputs/TextField";
+import Link from "next/link";
+import CheckBox from "../ui/inputs/CheckBox";
 
 export default function LoginForm() {
   return (
@@ -24,7 +23,7 @@ export default function LoginForm() {
               className="w-3 md:w-5"
               src="/assets/icons/google.svg"
               alt="google-icon"
-            />{' '}
+            />{" "}
             Sign in with Google
           </button>
         </div>
@@ -49,7 +48,7 @@ export default function LoginForm() {
             label={
               <span className="flex items-center justify-between">
                 <span>Password</span>
-                <Link href={'/forget-password'} className="text-secondary">
+                <Link href={"/forget-password"} className="text-secondary">
                   Forget Password?
                 </Link>
               </span>
@@ -66,8 +65,8 @@ export default function LoginForm() {
           </button>
 
           <p className="text-gray-400 text-sm mt-8">
-            Don&apos;t have an account yet?{' '}
-            <Link href={'/register'} className="text-secondary">
+            Don&apos;t have an account yet?{" "}
+            <Link href={"/register"} className="text-secondary">
               Sign up here
             </Link>
           </p>
