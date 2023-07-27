@@ -62,3 +62,7 @@
 
   }
   
+
+  #monthly-overview .apexcharts-grid,   #sales-line-chart .apexcharts-grid {
+    display: none;
+  }
