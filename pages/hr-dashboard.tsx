@@ -11,25 +11,27 @@ import React from "react";
 export default function HRDashboard() {
   return (
     <Layout>
-      <div className="grid grid-cols-12 gap-5 items-start">
-        <div className="col-span-7 grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-12 gap-5 items-start py-5">
+        <div className="col-span-12 xl:col-span-7 grid grid-cols-2 gap-4">
           <EmployeeInfo />
           <EmployeesAvailability />
           <TotalEmployees />
           <TopHiringSources />
         </div>
-        <div className="col-span-5 grid grid-cols-1 gap-4">
+        <div className="col-span-12 xl:col-span-5 grid grid-cols-2 gap-4 ">
           <Applications />
-          <InterviewHired
-            icon={"mdi:users-outline"}
-            title="Interview"
-            count={50}
-          />
-          <InterviewHired
-            icon={"icon-park-outline:holding-hands"}
-            title="Hired"
-            count={20}
-          />
+          <div className="col-span-2 md:col-span-1 xl:col-span-2  grid grid-cols-2 gap-4">
+            <InterviewHired
+              icon={"mdi:users-outline"}
+              title="Interview"
+              count={50}
+            />
+            <InterviewHired
+              icon={"icon-park-outline:holding-hands"}
+              title="Hired"
+              count={20}
+            />
+          </div>
           <UpcommingInterviews />
         </div>
       </div>

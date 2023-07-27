@@ -18,13 +18,13 @@ export default function EmployeeInfo() {
           show: false,
         },
       },
-      colors: ["#5f5af6"],
+      colors: ["#f5558d"],
       dataLabels: {
         enabled: false,
       },
       stroke: {
         curve: "smooth",
-        width: 3,
+        width: 5,
       },
 
       grid: {

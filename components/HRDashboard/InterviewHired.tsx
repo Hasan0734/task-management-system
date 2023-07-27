@@ -10,7 +10,7 @@ interface PropsType {
 
 export default function InterviewHired({ icon, title, count }: PropsType) {
   return (
-    <>
+    <div className="col-span-2">
       <Card
         countNumber={""}
         titleAreaClass=""
@@ -28,6 +28,6 @@ export default function InterviewHired({ icon, title, count }: PropsType) {
           </div>
         </div>
       </Card>
-    </>
+    </div>
   );
 }

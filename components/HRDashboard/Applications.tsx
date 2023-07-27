@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Applications() {
   return (
+    <div className="col-span-2 md:col-span-1 xl:col-span-2">
     <Card
       countNumber={""}
       titleAreaClass=""
@@ -26,5 +27,6 @@ export default function Applications() {
         </div>
       </div>
     </Card>
+    </div>
   );
 }

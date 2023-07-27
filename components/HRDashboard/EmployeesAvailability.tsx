@@ -3,7 +3,7 @@ import Card from "../ui/Card/Card";
 
 export default function EmployeesAvailability() {
   return (
-    <div className="col-span-1">
+    <div className="col-span-2 md:col-span-1">
       <Card
         countNumber={""}
         titleAreaClass=""

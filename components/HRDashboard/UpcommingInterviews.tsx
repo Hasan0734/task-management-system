@@ -62,7 +62,7 @@ const applicants = [
 
 export default function UpcommingInterviews() {
   return (
-    <>
+    <div className="col-span-2">
       <Card
         countNumber={""}
         titleAreaClass=""
@@ -71,7 +71,7 @@ export default function UpcommingInterviews() {
         title="Upcomming Interviews"
       >
         <div className="mt-2">
-          <ul className="divide-y h-[320px] overflow-y-scroll  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500 scrollbar-thumb-rounded-md scrollbar-w-1.5">
+          <ul className="divide-y h-auto lg:h-[320px]  overflow-y-scroll  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500 scrollbar-thumb-rounded-md scrollbar-w-1.5">
             {applicants.map((applicant) => (
               <li
                 key={applicant.id}
@@ -97,6 +97,6 @@ export default function UpcommingInterviews() {
           </ul>
         </div>
       </Card>
-    </>
+    </div>
   );
 }
