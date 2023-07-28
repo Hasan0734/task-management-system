@@ -12,21 +12,23 @@ export default function HRDashboard() {
   return (
     <Layout>
       <div className="grid grid-cols-12 gap-5 items-start py-5">
-        <div className="col-span-12 xl:col-span-7 grid grid-cols-2 gap-4">
+        <div className="col-span-12 xl:col-span-8 grid grid-cols-2 gap-4">
           <EmployeeInfo />
           <EmployeesAvailability />
           <TotalEmployees />
           <TopHiringSources />
         </div>
-        <div className="col-span-12 xl:col-span-5 grid grid-cols-2 gap-4 ">
+        <div className="col-span-12 xl:col-span-4 grid grid-cols-2 gap-4 ">
           <Applications />
-          <div className="col-span-2 md:col-span-1 xl:col-span-2  grid grid-cols-2 gap-4">
+          <div className="col-span-2 md:col-span-1 xl:col-span-2 grid grid-cols-2 gap-4">
             <InterviewHired
-              icon={"mdi:users-outline"}
+              leftIcon="mdi:chart-bar"
+              icon={"fa6-solid:users"}
               title="Interview"
               count={50}
             />
             <InterviewHired
+              leftIcon="mdi:chart-line"
               icon={"icon-park-outline:holding-hands"}
               title="Hired"
               count={20}

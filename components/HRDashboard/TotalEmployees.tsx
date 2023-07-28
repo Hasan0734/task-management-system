@@ -5,27 +5,17 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function TotalEmployees() {
   const data: any = {
-    series: [44, 55, 13, 43, 22],
+    series: [44, 55],
     options: {
-      chart: {
-        width: 380,
-        type: "pie",
+      dataLabels: {
+        enabled: false,
       },
-
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-            legend: {
-              position: "bottom",
-            },
-          },
-        },
-      ],
+      colors: ["#a7daff", "#f5558d"],
+      legend: {
+        position: "bottom",
+        horizontalAlign: "center",
+      },
+      labels: ["Man", "Women"],
     },
   };
   return (
@@ -34,16 +24,16 @@ export default function TotalEmployees() {
         countNumber={423}
         titleAreaClass=""
         titleClass=""
-        cardClass=""
+        cardClass="h-full"
         title="Total Employees"
       >
-        <div className="w-full">
+        <div className="w-full mt-5">
           <Chart
             width={"100%"}
+            height={280}
             options={data.options}
             series={data.series}
-            type="pie"
-            height={180}
+            type="donut"
           />
         </div>
       </Card>
