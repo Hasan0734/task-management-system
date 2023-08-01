@@ -1,11 +1,11 @@
-'use client'
-
 import { Icon } from "@iconify/react";
 import React from "react";
 
-export default function AuthLayout({ children }:{
-  children: React.ReactNode;
-}) {
+type Props = {
+  children: JSX.Element;
+};
+
+export default function AuthLayout({ children }: Props) {
   return (
     <>
       <div className="h-screen w-screen flex items-center justify-center">

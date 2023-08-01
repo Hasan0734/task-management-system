@@ -1,32 +1,26 @@
-export const metadata = {
-  title: 'Task Management System',
-  description: 'Manage your project task with employee',
-};
+import Navbar from "@/components/Navbar/Navbar";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import React, { useState } from "react";
 
-import { Open_Sans } from 'next/font/google';
-import '../globals.css';
 
-import React from 'react';
-import Layout from '../components/Layout/Layout';
-
-// If loading a variable font, you don't need to specify the font weight
-const openSans = Open_Sans({
-  weight: ['300', '400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['cyrillic'],
-});
-
-export default function RootLayout({
-  children,
-}: {
+interface propsType {
   children: React.ReactNode;
-}) {
+}
 
+export default function Layout({ children }: propsType) {
+  // const [toggle, setToggle] = useState(false);
   return (
-    <html lang="en" className={openSans.className}>
-      <body>
-        <Layout>{children}</Layout>
-      </body>
-    </html>
+    <>
+      <div className="flex h-screen w-screen overflow-hidden">
+        <Sidebar />
+        <div
+          className="flex-grow px-4 xl:px-8 overflow-y-scroll
+         scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500 scrollbar-thumb-rounded-md scrollbar-w-1.5"
+        >
+          <Navbar />
+          {children}
+        </div>
+      </div>
+    </>
   );
 }

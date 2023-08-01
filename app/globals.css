@@ -6,7 +6,7 @@
 
 @layer base {
     body{
-        @apply bg-ofLight
+        @apply bg-ofLight text-gray-600
     }
 }
 
@@ -62,3 +62,7 @@
 
   }
   
+
+  #monthly-overview .apexcharts-grid,   #sales-line-chart .apexcharts-grid, #employee-line-chart .apexcharts-grid, .apexcharts-grid-borders {
+    display: none;
+  }
