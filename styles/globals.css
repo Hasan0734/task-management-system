@@ -63,6 +63,12 @@
   }
   
 
+<<<<<<< HEAD:app/globals.css
   #monthly-overview .apexcharts-grid,   #sales-line-chart .apexcharts-grid, #employee-line-chart .apexcharts-grid, .apexcharts-grid-borders {
     display: none;
   }
+=======
+  #monthly-overview .apexcharts-grid,   #sales-line-chart .apexcharts-grid {
+    display: none;
+  }
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801:styles/globals.css

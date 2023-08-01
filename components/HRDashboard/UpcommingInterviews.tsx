@@ -71,7 +71,11 @@ export default function UpcommingInterviews() {
         title="Upcomming Interviews"
       >
         <div className="mt-2">
+<<<<<<< HEAD
           <ul className="divide-y h-auto lg:h-[465px]  overflow-y-scroll  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500 scrollbar-thumb-rounded-md scrollbar-w-1.5">
+=======
+          <ul className="divide-y h-auto lg:h-[320px]  overflow-y-scroll  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-orange-500 scrollbar-thumb-rounded-md scrollbar-w-1.5">
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
             {applicants.map((applicant) => (
               <li
                 key={applicant.id}

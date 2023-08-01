@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         primary: '#484c7f',
         ofLight: '#f9fbfd',
-        secondary: '#F19828'
+        secondary: '#F19828',
+        lightpink: '#f5558d'
       },
       screens: {
         xs: '490px'

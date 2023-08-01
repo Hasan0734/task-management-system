@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import React from 'react';
 import Card from '../ui/Card/Card';
 import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+=======
+import React from "react";
+import Card from "../ui/Card/Card";
+import dynamic from "next/dynamic";
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 
 export default function EmployeeInfo() {
   const data: any = {
     series: [
       {
+<<<<<<< HEAD
         name: 'Available',
         data: [
           [new Date('2023-01-10').getTime(), 5],
@@ -38,11 +46,38 @@ export default function EmployeeInfo() {
         },
       },
 
+=======
+        name: "Available",
+        data: [
+          [1327359600000, 30.95],
+          [1327446000000, 31.34],
+          [1327532400000, 31.18],
+          [1327618800000, 31.05],
+          [1327878000000, 31.0],
+          [1327964400000, 30.95],
+          [1328050800000, 31.24],
+          [1328137200000, 31.29]
+        ],
+      },
+    ],
+    options: {
+      chart: {
+        type: "line",
+        toolbar: {
+          show: false,
+        },
+      },
+      colors: ["#f5558d", "#F19828"],
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
       dataLabels: {
         enabled: false,
       },
       stroke: {
+<<<<<<< HEAD
         curve: 'smooth',
+=======
+        curve: "smooth",
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
         width: 5,
       },
 
@@ -50,6 +85,7 @@ export default function EmployeeInfo() {
         show: true,
       },
       xaxis: {
+<<<<<<< HEAD
         type: 'datetime',
         categories: [
           '1/11/2000',
@@ -77,6 +113,17 @@ export default function EmployeeInfo() {
             return opts.dateFormatter(new Date(timestamp), 'dd MMM');
           },
         },
+=======
+        type: "datetime",
+        categories: [
+          "01/01/2022 GMT",
+          "01/02/2022 GMT",
+          "01/03/2022 GMT",
+          "01/04/2022 GMT",
+          "01/05/2022 GMT",
+          "01/06/2022 GMT",
+        ],
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 
         axisBorder: {
           show: false,
@@ -94,6 +141,7 @@ export default function EmployeeInfo() {
       yaxis: {
         show: false,
       },
+<<<<<<< HEAD
       markers: {
         size: 0,
         colors: undefined,
@@ -134,14 +182,31 @@ export default function EmployeeInfo() {
     <div className="col-span-2">
       <Card
         countNumber={''}
+=======
+      fill: {
+        type: "gradient",
+      },
+    },
+  };
+  return (
+    <div className="col-span-2">
+      <Card
+        countNumber={""}
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
         titleAreaClass=""
         titleClass=""
         cardClass=""
         title="Employee Info"
       >
+<<<<<<< HEAD
         <div id="employee-line-chart" className="w-full">
           <Chart
             width={'100%'}
+=======
+        <div id="sales-line-chart" className="w-full">
+          <Chart
+            width={"100%"}
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
             options={data.options}
             series={data.series}
             type="line"

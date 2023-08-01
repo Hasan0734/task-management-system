@@ -11,8 +11,13 @@ export const sidebar = [
       },
       {
         id: 2,
+<<<<<<< HEAD
         name: "Projects Dashboard",
         link: "/projects-dashboard",
+=======
+        name: "Project Dashboard",
+        link: "/project-dashboard",
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
       },
     ],
   },
@@ -109,6 +114,73 @@ export const sidebar = [
       },
     ],
   },
+<<<<<<< HEAD
+=======
+];
+
+export const notifications = [
+  {
+    id: 1,
+    title: "Added  2021-02-19 my-Task ui/ux Design",
+    category: "Review",
+    user: {
+      id: 1,
+      firstName: "Jahid",
+      lastName: "Hasan",
+      avatar: "/assets/avatars/avatar1.jpg",
+    },
+  },
+  {
+    id: 2,
+    title: "Task added Get Started with Fast Cad project",
+    user: {
+      id: 2,
+      firstName: "Rasel",
+      lastName: "Ahmed",
+      avatar: "/assets/avatars/avatar3.jpg",
+    },
+  },
+  {
+    id: 3,
+    title: "Quality Assurance Task Completed",
+    user: {
+      id: 3,
+      firstName: "Nasir",
+      lastName: "Mia",
+      avatar: "/assets/avatars/avatar6.jpg",
+    },
+  },
+  {
+    id: 4,
+    title: "Add New Project for App Developemnt",
+    user: {
+      id: 4,
+      firstName: "Diane",
+      lastName: "Fisher",
+      avatar: "",
+    },
+  },
+  {
+    id: 5,
+    title: "Add Timesheet For Rhinestone project",
+    user: {
+      id: 5,
+      firstName: "Andrea",
+      lastName: "Gill",
+      avatar: "/assets/avatars/avatar6.jpg",
+    },
+  },
+  {
+    id: 6,
+    title: "Add Calander Event",
+    user: {
+      id: 6,
+      firstName: "Zoe",
+      lastName: "Wright",
+      avatar: "/assets/avatars/avatar7.jpg",
+    },
+  },
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 ];
 
 export const notifications = [

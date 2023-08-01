@@ -1,16 +1,28 @@
+<<<<<<< HEAD
 'use client'
 
+=======
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 import React, { useState } from "react";
 import TextField from "../ui/inputs/TextField";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+import MyPopover from "../ui/MyPopover/MyPopover";
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 import NotificationPopover from "../NotificationPopover/NotificationPopover";
 import AccountPopover from "../AccountPopover/AccountPopover";
 import InviteEmployee from "../InviteEmployee/InviteEmployee";
 
 interface propsType {
+<<<<<<< HEAD
   setToggle?: (arg: boolean) => void;
   toggle?: boolean;
+=======
+  setToggle: (arg: boolean) => void;
+  toggle: boolean;
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 }
 
 const employees = [
@@ -93,14 +105,21 @@ export default function Navbar({ setToggle, toggle }: propsType) {
             </div>
           </div>
           <div className="block xl:hidden">
+<<<<<<< HEAD
             <button 
             // onClick={() => setToggle(!toggle)}
             >
+=======
+            <button onClick={() => setToggle(!toggle)}>
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
               <Icon width={25} icon={"fa-solid:bars"} />
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
       </nav>
     </>
   );

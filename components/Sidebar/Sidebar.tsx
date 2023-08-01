@@ -1,4 +1,7 @@
+<<<<<<< HEAD:components/Sidebar/Sidebar.tsx
 'use client'
+=======
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801:app/components/Sidebar/Sidebar.tsx
 import { sidebar } from "@/utils/data";
 import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
@@ -14,8 +17,13 @@ function Sidebar({ toggle, setToggle }: propsType) {
 
   return (
     <div
+<<<<<<< HEAD:components/Sidebar/Sidebar.tsx
       className={`fixed xl:relative ${
         toggle ? "left-0 inset-y-0" : "-left-[500px]"
+=======
+      className={`absolute xl:relative ${
+        toggle ? "left-0" : "-left-[500px]"
+>>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801:app/components/Sidebar/Sidebar.tsx
       } xl:-left-0 z-10 ${
         collapse ? "w-[130px]" : "w-[250px] md:w-[315px]"
       } xl:pl-6 xl:py-6 h-full transition-all duration-300`}
