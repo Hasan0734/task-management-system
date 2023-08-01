@@ -174,3 +174,102 @@ export const notifications = [
     },
   },
 ];
+
+export const projectsData = [
+  {
+    id: 1,
+    title: "Rhinestone",
+    dateStart: "18-02-2021",
+    deadLine: "2 Months",
+    leader: {
+      name: "Adam",
+      avatar: "/assets/avatars/avatar1.jpg",
+    },
+    completion: "90%",
+    stage: "High",
+  },
+  {
+    id: 2,
+    title: "Gob Geeklords",
+    dateStart: "16-03-2021",
+    deadLine: "	10 Month",
+    leader: {
+      name: "Evan",
+      avatar: "/assets/avatars/avatar2.jpg",
+    },
+    completion: "65%",
+    stage: "Medium",
+  },
+  {
+    id: 3,
+    title: "Practice to Perfect",
+    dateStart: "12-02-2021",
+    deadLine: "1 Month",
+    leader: {
+      name: "Colin",
+      avatar: "/assets/avatars/avatar3.jpg",
+    },
+    completion: "80%",
+    stage: "Low",
+  },
+  {
+    id: 4,
+    title: "Java Dalia",
+    dateStart: "17-03-2021",
+    deadLine: "8 Month",
+    leader: {
+      name: "Connor",
+      avatar: "/assets/avatars/avatar4.jpg",
+    },
+    completion: "45%",
+    stage: "Low",
+  },
+  {
+    id: 5,
+    title: "Fast Cad",
+    dateStart: "14-04-2021",
+    deadLine: "2 Month",
+    leader: {
+      name: "Benjamin",
+      avatar: "/assets/avatars/avatar5.jpg",
+    },
+    completion: "76%",
+    stage: "Medium",
+  },
+  {
+    id: 6,
+    title: "Box of Crayons",
+    dateStart: "10-01-2021",
+    deadLine: "4 Month",
+    leader: {
+      name: "Keith",
+      avatar: "/assets/avatars/avatar6.jpg",
+    },
+    completion: "58%",
+    stage: "Medium",
+  },
+  {
+    id: 6,
+    title: "Social Geek Made",
+    dateStart: "10-01-2021",
+    deadLine: "4 Month",
+    leader: {
+      name: "Keith",
+      avatar: "/assets/avatars/avatar6.jpg",
+    },
+    completion: "40%",
+    stage: "Medium",
+  },
+  {
+    id: 6,
+    title: "Practice to Perfect",
+    dateStart: "12-02-2021",
+    deadLine: "1 Month",
+    leader: {
+      name: "Peter",
+      avatar: "/assets/avatars/avatar7.jpg",
+    },
+    completion: "20%",
+    stage: "Medium",
+  },
+];

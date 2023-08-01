@@ -1,12 +1,13 @@
-'use clinet';
+"use clinet";
 
-import CounterCard from '@/components/ProjectsDashboard/CounterCard';
-import CreateCredential from '@/components/ProjectsDashboard/CreateCredential';
-import FreeInquire from '@/components/ProjectsDashboard/FreeInquire';
-import IncomeAnalytics from '@/components/ProjectsDashboard/IncomeAnalytics';
-import ProjectTimeline from '@/components/ProjectsDashboard/ProjectTimeline';
-import TaskCountCard from '@/components/ProjectsDashboard/TaskCountCard';
-import React from 'react';
+import CounterCard from "@/components/ProjectsDashboard/CounterCard";
+import CreateCredential from "@/components/ProjectsDashboard/CreateCredential";
+import FreeInquire from "@/components/ProjectsDashboard/FreeInquire";
+import IncomeAnalytics from "@/components/ProjectsDashboard/IncomeAnalytics";
+import ProjectLists from "@/components/ProjectsDashboard/ProjectInformation/ProjectLists";
+import ProjectTimeline from "@/components/ProjectsDashboard/ProjectTimeline";
+import TaskCountCard from "@/components/ProjectsDashboard/TaskCountCard";
+import React from "react";
 
 const page = () => {
   return (
@@ -56,15 +57,16 @@ const page = () => {
 
         <CounterCard
           title="Progress Projects"
-          countNumber={'8456 Files'}
+          countNumber={"8456 Files"}
           icon="fluent:flowchart-20-filled"
         />
         <CounterCard
           title="Finished Projects"
-          countNumber={'88 Files'}
+          countNumber={"88 Files"}
           icon="fluent:clipboard-task-list-20-regular"
         />
       </div>
+      <ProjectLists />
     </div>
   );
 };
