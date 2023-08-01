@@ -2,21 +2,12 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 
 interface PropsType {
-<<<<<<< HEAD
   cardClass?: string;
   title?: string;
   children: React.ReactNode;
   titleClass?: string;
   titleAreaClass?: string;
   countNumber?: any;
-=======
-  cardClass: string;
-  title: string;
-  children: React.ReactNode;
-  titleClass: string;
-  titleAreaClass: string;
-  countNumber: any;
->>>>>>> 1096bcffef2d39ac0eb2199eb0832a9fd5b2e801
 }
 
 export default function Card({
