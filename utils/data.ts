@@ -249,7 +249,7 @@ export const projectsData = [
     stage: "Medium",
   },
   {
-    id: 6,
+    id: 7,
     title: "Social Geek Made",
     dateStart: "10-01-2021",
     deadLine: "4 Month",
@@ -261,7 +261,7 @@ export const projectsData = [
     stage: "Medium",
   },
   {
-    id: 6,
+    id: 8,
     title: "Practice to Perfect",
     dateStart: "12-02-2021",
     deadLine: "1 Month",
