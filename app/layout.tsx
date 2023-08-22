@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import 'react-tooltip/dist/react-tooltip.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
