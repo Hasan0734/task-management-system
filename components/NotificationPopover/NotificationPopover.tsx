@@ -12,9 +12,9 @@ export default function NotificationPopover() {
     absolute inline-flex h-full w-full rounded-full bg-gray-300"
       ></span>
       <MyPopover
-        bodyClass="max-h-[450px] overflow-hidden"
+        bodyClass="max-h-[450px] w-[300px] xs:w-[350px] overflow-hidden"
         buttonClass=""
-        panelClass="left-0 lg:left-auto md:right-0 mt-5"
+        panelClass="-left-9 xs:-left-20 lg:left-auto md:right-0 mt-5"
         button={<Icon className="text-primary" icon="mdi:bell" width={25} />}
       >
         <div className="flex flex-col">
@@ -56,7 +56,7 @@ export default function NotificationPopover() {
                           2MIN
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600 group-hover:text-secondary mr-8">
+                      <p className="text-sm text-gray-600 group-hover:text-secondary mr-8 line-clamp-1 sm:line-clamp-2">
                         {notification.title}
                       </p>
                       {notification?.category && (

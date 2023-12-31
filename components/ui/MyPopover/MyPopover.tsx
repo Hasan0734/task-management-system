@@ -2,6 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { twMerge } from "tailwind-merge";
 import React from 'react'
+import {cn} from "@/utils";
 
 interface propsType {
     button: React.ReactElement,
@@ -18,21 +19,14 @@ export default function MyPopover({
   bodyClass,
   panelClass,
 }: propsType) {
-  const allStyle = twMerge(
-    "bg-white w-[250px] sm:w-[400px] max-h-[80vh] overflow-auto ring-1 ring-gray-200 rounded shadow-md",
-    bodyClass
-  );
+
   return (
     <Popover className="relative">
       {({ open }) => (
         <>
+
           <Popover.Button
-            className={`outline-none
-                ${open ? "" : "text-opacity-90"}
-                ${twMerge(
-                  "z-10",
-                  buttonClass
-                )}`}
+            className={cn('outline-0 z-10', {"text-opacity-90": open}, buttonClass )}
           >
             {button}
           </Popover.Button>
@@ -51,7 +45,7 @@ export default function MyPopover({
                 panelClass
               )}
             >
-              <div className={allStyle}>{children}</div>
+              <div className={cn('bg-white w-[250px] sm:w-[400px] max-h-[80vh] overflow-auto ring-1 ring-gray-200 rounded shadow-md', bodyClass)}>{children}</div>
             </Popover.Panel>
           </Transition>
         </>
